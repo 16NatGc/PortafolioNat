@@ -1,0 +1,277 @@
+/* Variables de Color */
+:root {
+    --color-fondo: #f9f5f6;
+    --color-texto: #333;
+    --color-primario: #b1cbbb;
+    --color-secundario: #e1bee7;
+    --color-barra-progreso: #a5d6a7;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--color-primario), #cce0d8);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    animation: fadeInDown 1s ease;
+}
+
+.profile-info p {
+    font-size: 1.2em;
+    color: #555;
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.seccion {
+    padding: 80px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos específicos para las habilidades */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.habilidad {background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.barra-progreso {
+    height: 10px;
+    background-color: var(--color-barra-progreso);
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 0;
+    animation: expandWidth 1s ease forwards;
+    transition: width 0.5s ease;
+}
+
+/* Estilos de ancho para las barras de progreso */
+.html-css {
+    width: 80%;
+}
+
+.photoshop {
+    width: 40%;
+}
+
+.php-java-python {
+    width: 50%;
+}
+
+/* Estilos específicos para los proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.proyecto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #d8a4e5;
+}
+
+.habilidad i,
+.contacto-info i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: var(--color-secundario);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #eee;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contacto-info {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.contacto-info strong {
+    font-weight: 600;
+}
+
+.contacto-info a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.contacto-info a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+.html-css {
+    width: 80% !important;
+}
+.photoshop {
+    width: 40% !important;
+}
+.php-java-python {
+    width: 50% !important;
+}
+
+/* Animaciones Keyframe */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    to {
+        width: 100%;
+    }
+}
+
+.html-css {
+    animation-delay: 0.2s;
+}
+
+.photoshop {
+    animation-delay: 0.4s;
+}
+
+.php-java-python {
+    animation-delay: 0.6s;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+    }
+}
